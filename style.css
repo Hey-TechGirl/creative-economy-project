@@ -1,0 +1,311 @@
+/*----------------------------------------
+   Creative Economy Project - CSS Style
+  ----------------------------------------*/
+* {
+  margin: 0;
+}
+
+#nav-bar {
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.65);
+  z-index: 2;
+}
+
+#nav-bar input{
+  display: none;
+}
+
+#nav-bar ul {
+  position: absolute;
+  right: 3vw;
+}
+
+#nav-bar ul li {
+  padding: 22px 2vw;
+  display: inline-block;
+  list-style: none;
+}
+
+#nav-bar ul li:hover {
+  background-color: rgba(140, 209, 201, 0.9);
+  border-bottom: 5px solid rgba(53, 78, 75, 0.6);
+}
+#nav-bar ul li:hover a{
+  color: #000;
+}
+
+#nav-bar a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  vertical-align: middle;
+  color: #FFF;
+}
+
+#nav-bar p#logo a{
+  position: absolute;
+  padding-top: 10px;
+  letter-spacing: 0px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  left: 5vw;
+}
+
+#nav-bar p#logo span{
+  color: #40E0D0;
+  font-size: 2.2rem;
+}
+
+#landing-page h1 {
+  position: absolute;
+  top: 25vh;
+  right: 14vw;
+  z-index: 1;
+}
+
+#landing-page h1 span.title {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-size: 3.5rem;
+  color: #FFF;
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.15);
+}
+
+#landing-page h1 span.title span {
+  color: #40E0D0;
+  font-size: 3.6rem;
+}
+
+#landing-page h2 {
+  position: absolute;
+  padding: 25px 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.15rem;
+  line-height: 30px;
+  top: 60vh;
+  right: 13vw;
+  text-align: center;
+  width: 350px;
+  color: #FFF;
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.15);
+  border-top: 2px solid #FFF;
+  border-bottom: 2px solid #FFF;
+  z-index: 1;
+}
+
+#landing-page video {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  background: #000;
+  transition: all 2s ease;
+  z-index: 1;
+}
+
+#project {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 99.5vh;
+  z-index: 1;
+  background-color: #000;
+}
+
+#project h1 {
+  margin-top: 15vh;
+  margin-left: 10vw;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #FFF;
+}
+
+#project h1 span.dot {
+  color: #40E0D0;
+  font-size: 2.2rem;
+}
+
+#project div {
+  margin: 5vh 0;
+  margin-left: 10vw;
+  width: 40vw;
+  font-family: 'Open Sans', sans-serif;
+  color: #FFF;
+}
+
+#project p {
+  margin: 2.5vh 0;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 30px;
+  color: #FFF;
+}
+
+/*----------------------------------------
+   RESPONSIVE LAYOUT
+  ----------------------------------------*/
+@media (max-width: 900px) {
+  #nav-bar div#toggle {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  #nav-bar input {
+    position: absolute;
+    top: 16px;
+    right: 6.5vw;
+    width: 40px;
+    height: 32px;
+    display: block;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  #nav-bar div#toggle span {
+    position: relative;
+    display: block;
+    top: 20px;
+    left: 87.5vw;
+    width: 35px;
+    height: 4px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    background-color: #40E0D0;
+    z-index: 2;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  #nav-bar div#toggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+  #nav-bar div#toggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  #nav-bar input:checked + div#toggle span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-4px, -2px);
+    background-color: #329086;
+  }
+  #nav-bar input:checked + div#toggle span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  #nav-bar input:checked + div#toggle span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(-2px, -1px);
+  }
+  #nav-bar div#toggle ul {
+    padding: 2vw 0 0 0;
+    margin-top: 31px;
+    opacity: 0;
+  }
+  #nav-bar div#toggle ul li{
+    position: relative;
+    right: -18px;
+    width: 100vw;
+    padding: 2vw 0;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  #nav-bar ul li:last-child {
+    border-bottom: 5px solid #000 !important;
+  }
+  #nav-bar div#toggle li a {
+    display: block;
+    padding: 0px 15vw;
+    animation: none;
+  }
+  #nav-bar div#toggle ul li:hover {
+    background-color: rgba(140, 209, 201, 0.9);
+    border: 0px;
+  }
+  #nav-bar div#toggle ul li:hover a{
+    color: #000;
+  }
+  #nav-bar input:checked + div#toggle ul {
+    -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+	  animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+  }
+  #nav-bar input:checked + #nav-bar {
+    background-color: rgba(0, 0, 0, 1);
+    -webkit-animation: swing-in-top-bck 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.2s both;
+	  animation: swing-in-top-bck 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.2s both;
+  }
+  #project {
+    height: auto;
+  }
+  #project div {
+    margin: 5vh 15vw;
+    width: 70vw;
+  }
+  #project h1 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+
+/*----------------------------------------
+   animation fade-out
+  ----------------------------------------*/
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*----------------------------------------
+   animation slide-in-right
+  ----------------------------------------*/
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
