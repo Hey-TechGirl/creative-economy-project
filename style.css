@@ -3,6 +3,7 @@
   ----------------------------------------*/
 * {
   margin: 0;
+  padding: 0;
 }
 
 #nav-bar {
@@ -67,7 +68,7 @@
 
 #landing-page h1 {
   position: absolute;
-  top: 25vh;
+  top: 23vh;
   right: 14vw;
   z-index: 1;
 }
@@ -95,7 +96,7 @@
   font-weight: bold;
   font-size: 1.15rem;
   line-height: 30px;
-  top: 60vh;
+  top: 55vh;
   right: 13vw;
   text-align: center;
   width: 350px;
@@ -107,7 +108,8 @@
 }
 
 #landing-page video {
-  position: absolute;
+  position: relative;
+  float: left;
   width: 100%;
   height: 100vh;
   object-fit: cover;
@@ -116,50 +118,426 @@
   z-index: 1;
 }
 
-#project {
-  position: absolute;
+#project, #participate {
+  position: relative;
+  float: left;
   width: 100%;
-  height: 100vh;
-  top: 99.5vh;
+  height: auto;
   z-index: 1;
+  transform: skewY(-5deg);
+}
+
+#project {
+  top: -5vh;
   background-color: #000;
 }
 
-#project h1 {
-  margin-top: 15vh;
+#participate {
+  top: -10vh;
+  padding-top: 20vh;
+  background-color: #FFF;
+}
+
+#project h1, #participate h1 {
   margin-left: 10vw;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 2rem;
   letter-spacing: 2px;
+  transform: skewY(5deg);
+}
+
+#project h1 {
+  padding-top: 25vh;
   color: #FFF;
 }
 
-#project h1 span.dot {
-  color: #40E0D0;
-  font-size: 2.2rem;
+#participate h1 {
+  margin-top: 5vh;
+  color: #000;
 }
 
-#project div {
-  margin: 5vh 0;
-  margin-left: 10vw;
+#project h1 span.dot,
+#participate h1 span.dot,
+#survey-form h1 span.dot {
+  color: #40E0D0;
+  font-size: 2.4rem;
+}
+
+#project div.long-text {
+  margin: 0 10vw;
   width: 40vw;
   font-family: 'Open Sans', sans-serif;
   color: #FFF;
+  transform: skewY(5deg);
+}
+
+#participate div.participate-container {
+  margin: 5vh 10vw;
+  font-family: 'Open Sans', sans-serif;
+  transform: skewY(5deg);
+}
+
+#participate div.column {
+  margin: 3vh auto;
+  margin-right: 3vw;
+  width: 23vw;
+  vertical-align: top;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+}
+
+#participate div.column h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #40E0D0;
+}
+
+#participate div.column:last-child {
+  margin-right: 0;
 }
 
 #project p {
   margin: 2.5vh 0;
   font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
   line-height: 30px;
   color: #FFF;
+}
+
+#project p:first-child {
+  margin-top: 0;
+}
+
+#project p:last-child {
+  margin-bottom: 15vh;
+}
+
+#participate div.column p {
+  margin: 3vh 0;
+  line-height: 30px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+#participate div.participate-button {
+  margin: 5vh 5vw;
+  width: 70vw;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 50px;
+}
+
+#project button,
+#participate div.participate-button button,
+#survey-form button {
+  margin-top: 10vh;
+  padding: 10px 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  background-color: #40E0D0;
+  border-radius: 25px;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+#project button {
+  margin: 5vh 10vw 15vh;
+}
+
+#project button:hover {
+  color: #000;
+  background-color: rgba(140, 209, 201, 0.9);
+  border: 3px solid rgba(53, 78, 75, 0.6);
+}
+
+#participate div.participate-button button:hover {
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+#survey-form {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10vh;
+}
+
+#survey-form h1 {
+  padding: 15vh 0 0 38vw;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+}
+
+#survey-form h2 {
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  line-height: 30px;
+}
+
+#survey-form h2 em {
+  padding-top: 3vh;
+  font-weight: normal;
+  font-size: 1.1rem;
+  line-height: 30px;
+}
+
+#survey-form h3 {
+  padding: 1vh 0 0 5vw;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+#survey-form p.consent-form {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  padding: 3vh 5vw 0;
+  text-align: left;
+  line-height: 30px;
+}
+
+#survey-form main ol.consent-form {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  padding: 2vh 5vw 0 7vw;
+  text-align: left;
+  line-height: 30px;
+  counter-reset: item;
+}
+
+#survey-form main ol.consent-form li {
+  list-style-type: none;
+  counter-increment: item;
+}
+
+#survey-form main ol.consent-form li::before {
+  display:inline-block;
+  width: 1.5em;
+  margin-right: 10px;
+  font-weight: bold;
+  text-align: left;
+  content:counter(item) ".";
+}
+
+#survey-form main ul.consent-form {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  padding: 2vh 5vw 0 8.6vw;
+  text-align: left;
+  line-height: 30px;
+}
+
+#survey-form main {
+  margin: 5vh auto 0;
+  width: 60vw;
+  height: auto;
+  overflow: visible;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  border: 0.3px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.06), 0 6px 15px 0 rgba(0, 0, 0, 0.018);
+}
+
+#survey-form main p#form-top {
+  padding-top: 3vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 25px;
+}
+
+#survey-form main div.labels {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  vertical-align: middle;
+}
+
+#survey-form main div#portfolio {
+  margin-top: 5vh;
+}
+
+#survey-form main div#portfolio label {
+  margin: 10px;
+  font-family: 'Open Sans', sans-serif;
+  width: 70%;
+}
+
+#survey-form main div.right-tab {
+  display: inline-block;
+  text-align: left;
+  width: 55%;
+  vertical-align: middle;
+}
+
+#survey-form main form {
+  margin-top: 3vh;
+  padding-left: 5vw;
+}
+
+#survey-form main div.thanks {
+  height: 25.6vh;
+  padding: 17vh 0 13vh;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+#survey-form main div.thanks p{
+  padding: 5px;
+}
+
+#survey-form .input-field {
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  height: 25px;
+  width: 250px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid rgba(140, 209, 201, 0.7);
+  border-radius: 5px;
+}
+
+#survey-form .dropdown {
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  height: 37px;
+  width: 160px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid rgba(140, 209, 201, 0.7);
+  border-radius: 5px;
+}
+
+#survey-form .inline {
+  display: inline;
+  margin-top: 2vh;
+}
+
+#survey-form .input {
+  display: inline;
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  height: 25px;
+  width: 240px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid rgba(140, 209, 201, 0.7);
+  border-radius: 5px;
+}
+
+#survey-form input.consent {
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  height: 20px;
+  width: 240px;
+  padding: 5px;
+  margin: 0 5px;
+  border: 1px solid rgba(140, 209, 201, 0.7);
+  border-radius: 5px;
+}
+
+#survey-form label.consent {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  display: inline-block;
+  text-align: right;
+  width: 60%;
+  vertical-align: middle;
+}
+
+#survey-form div.row-tab {
+  margin-top: 1vh;
+}
+
+#survey-form div#top {
+  margin-top: 5vh;
+}
+
+#survey-form ul.inside-form {
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.9rem;
+  list-style: none;
+  float: left;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+#survey-form li {
+  padding: 5px;
+}
+
+#survey-form .work {
+  margin-right: 10px;
+}
+
+#survey-form button {
+  margin: 5vh 0;
+}
+
+#survey-form div.button {
+  position: relative;
+  left: -2.5vw;
+}
+
+#survey-form div.calendly-inline-widget{
+  margin: 5vh 0;
+  min-width: 320px;
+  height: 730px;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+footer {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer div.footer-content {
+  position: relative;
+  float: left;
+  top: -4px;
+  text-align: center;
+  width: 100%;
+  border-top: 5px solid rgba(0, 0, 0, 0.8);
+}
+
+footer div.footer-content p {
+  margin-top: 6px;
+  font-family: "OpenSans", sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+footer div.footer-content img {
+  width: 80px;
+  vertical-align: middle;
 }
 
 /*----------------------------------------
    RESPONSIVE LAYOUT
   ----------------------------------------*/
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   #nav-bar div#toggle {
     position: absolute;
     width: 100%;
@@ -248,12 +626,12 @@
     -webkit-animation: swing-in-top-bck 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.2s both;
 	  animation: swing-in-top-bck 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.2s both;
   }
-  #project {
-    height: auto;
+  #project h1{
+    margin-top: 15vh;
   }
-  #project div {
+  #project div.long-text {
     margin: 5vh 15vw;
-    width: 70vw;
+    width: 75vw;
   }
   #project h1 {
     margin-left: 0;
