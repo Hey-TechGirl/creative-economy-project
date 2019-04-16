@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Economy Project</title>
     <link rel="stylesheet" href="style.css" type = "text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800,900" rel="stylesheet">
@@ -12,7 +13,7 @@
   <body>
     <header>
       <nav id="nav-bar">
-        <p id="logo"><a href="#landing-page">Thesis Project<span class="dot">.</span></a></p>
+        <p id="logo"><a href="index.html#landing-page">Thesis Project<span class="dot">.</span></a></p>
         <input type="checkbox"/>
         <div id="toggle">
           <span class="nav-mob"></span>
@@ -27,7 +28,7 @@
       </nav>
     </header>
     <section id="survey-form">
-      <h1>Interview <span class="dot">&middot;</span> Consent Form</h1>
+      <h1 class="consent">Interview <span class="dot">&middot;</span> Consent Form</h1>
       <main id="schedule">
         <h2>The Impact of Digitalization on Creative Economy <br><em>— how digital technologies increase creativity value</em></h2>
         <h3><strong>Research Interviewer: </strong> Suellen Cavalheiro <br><em></em></h3>
@@ -60,29 +61,31 @@
         </ol>
         <script type="text/javascript">var submitted=false;</script>
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thank-you.html';}"></iframe><form action="https://docs.google.com/forms/d/e/1FAIpQLSczzCQAzCshj7Bgv9clg_tbsfgkgjg8eWNM5va7H7MUksazYw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-          <p class="consent-form">I,<input class="consent" autofocus type="text" name="entry.1693630766" placeholder="Interviewee Full Name" id="name" required> agree with all the terms specified above and understand that by submitting this consent form I have this agreement formalized.</p>
-          <div id="top" class="row-tab">
-            <div class="labels">
-              <label id="name-label" class="consent" for="name">Full Name:</label>
+          <p class="consent-form">I,<input class="agreement" autofocus type="text" name="entry.1693630766" placeholder="Interviewee Full Name" id="name" required> agree with all the terms specified above and understand that by submitting this consent form I have this agreement formalized.</p>
+          <div id="interview-consent">
+            <div id="top" class="row-tab">
+              <div class="labels">
+                <label id="name-label" class="consent" for="name">Full Name:</label>
+              </div>
+              <div class="right-tab">
+                <input class="consent" autofocus type="text" name="entry.1615476040" placeholder="Enter your full name" id="name" required>
+              </div>
             </div>
-            <div class="right-tab">
-              <input class="consent" autofocus type="text" name="entry.1615476040" placeholder="Enter your full name" id="name" required>
+            <div class="row-tab">
+              <div class="labels">
+                <label id="email-label" class="consent" for="email">E-mail:</label>
+              </div>
+              <div class="right-tab">
+                <input class="consent" type="email" name="entry.407629318" id="email" placeholder="Enter your Email" required>
+              </div>
             </div>
-          </div>
-          <div class="row-tab">
-            <div class="labels">
-              <label id="email-label" class="consent" for="email">E-mail:</label>
-            </div>
-            <div class="right-tab">
-              <input class="consent" type="email" name="entry.407629318" id="email" placeholder="Enter your Email" required>
-            </div>
-          </div>
-          <div class="row-tab">
-            <div class="labels">
-              <label id="date" class="consent" for="email">Date:</label>
-            </div>
-            <div class="right-tab">
-              <input class="consent" type="date" name="entry.783632920" id="date" placeholder="Enter your Email" required>
+            <div class="row-tab">
+              <div class="labels">
+                <label id="date" class="consent" for="email">Date:</label>
+              </div>
+              <div class="right-tab">
+                <input class="consent" type="date" name="entry.783632920" id="date" placeholder="Enter your Email" required>
+              </div>
             </div>
           </div>
           <div class="button">

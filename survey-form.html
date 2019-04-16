@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Economy Project</title>
     <link rel="stylesheet" href="style.css" type = "text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800,900" rel="stylesheet">
@@ -12,7 +13,7 @@
   <body>
     <header>
       <nav id="nav-bar">
-        <p id="logo"><a href="#landing-page">Thesis Project<span class="dot">.</span></a></p>
+        <p id="logo"><a href="index.html#landing-page">Thesis Project<span class="dot">.</span></a></p>
         <input type="checkbox"/>
         <div id="toggle">
           <span class="nav-mob"></span>
@@ -29,7 +30,8 @@
     <section id="survey-form">
       <h1>Pre-interview <span class="dot">&middot;</span> Survey</h1>
       <main>
-        <p id="form-top">Complete the form to participate in our research interview. <br> We are waiting to hear your opinion about the creative work!</p>
+        <p id="form-top">Complete the form to participate<br class="survey-title"> in our research interview.
+          <br> We are waiting to hear your <br class="survey-title">opinion about the creative work!</p>
         <script type="text/javascript">var submitted=false;</script>
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='calendar-schedule.html';}"></iframe><form action="https://docs.google.com/forms/d/e/1FAIpQLSeS-y-aJDKf2nxaWz4Jz9KV7YXpkbh06C7epTn5ZGmcjYBoXQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
           <div class="row-tab">
@@ -320,7 +322,7 @@
           </div>
           <div class="row-tab">
             <div class="labels">
-              <label for="industry">Which industry is more related to your work?</label>
+              <label id="industry" for="industry">Which industry is more related to your work?</label>
             </div>
             <div class="right-tab">
               <select class="dropdown" name="entry.1989680039" required>
@@ -346,9 +348,9 @@
           </div>
           <div class="row-tab">
             <div id="portfolio">
-              <label for="portfolio">Send the link of your portfolio or from a social media where we could see your work.</label>
+              <label for="portfolio">Send the link of your portfolio or from a <br class="survey-break">social media where we could see your work.</label>
             </div>
-            <div class="right-tab">
+            <div id="social-media" class="right-tab">
               <select class="inline dropdown" name="entry.17182469" required>
                 <option disabled selected value>Select an option</option>
                 <option value="twitter">Twitter</option>

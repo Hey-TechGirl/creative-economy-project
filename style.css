@@ -6,6 +6,16 @@
   padding: 0;
 }
 
+.rwd-break,
+.btm-break,
+.btt-break,
+.mtr-break,
+.survey-break,
+.survey-title,
+.form-break {
+  display: none;
+}
+
 #nav-bar {
   position: fixed;
   width: 100%;
@@ -128,7 +138,7 @@
 }
 
 #project {
-  top: -5vh;
+  top: -10vh;
   background-color: #000;
 }
 
@@ -174,7 +184,8 @@
 }
 
 #participate div.participate-container {
-  margin: 5vh 10vw;
+  margin: 5vh auto;
+  padding-left: 12%;
   font-family: 'Open Sans', sans-serif;
   transform: skewY(5deg);
 }
@@ -216,9 +227,9 @@
 }
 
 #participate div.column p {
-  margin: 3vh 0;
+  margin: 4vh 0;
   line-height: 30px;
-  text-align: center;
+  text-align: left;
   font-size: 1.1rem;
 }
 
@@ -307,6 +318,17 @@
   line-height: 30px;
 }
 
+#survey-form input.agreement {
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  height: 20px;
+  width: 160px;
+  padding: 5px;
+  margin: 0 5px;
+  border: 1px solid rgba(140, 209, 201, 0.7);
+  border-radius: 5px;
+}
+
 #survey-form main ol.consent-form {
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
@@ -351,7 +373,7 @@
 }
 
 #survey-form main p#form-top {
-  padding-top: 3vh;
+  padding: 5vh 2vw 0vh;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
@@ -387,7 +409,7 @@
 
 #survey-form main form {
   margin-top: 3vh;
-  padding-left: 5vw;
+  padding: 0 5vw;
 }
 
 #survey-form main div.thanks {
@@ -426,6 +448,10 @@
 #survey-form .inline {
   display: inline;
   margin-top: 2vh;
+}
+
+#survey-form div#social-media {
+  width: 60%;
 }
 
 #survey-form .input {
@@ -497,9 +523,22 @@
 
 #survey-form div.calendly-inline-widget{
   margin: 5vh 0;
-  min-width: 320px;
+  min-width: 300px;
   height: 730px;
   background-color: rgba(0, 0, 0, 0.02);
+}
+
+main div#thanks {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 19.7vh 8vw;
+}
+
+main div#thanks span.dot{
+  display: block;
+  font-size: 2rem;
+  color: #40E0D0;
 }
 
 footer {
@@ -537,14 +576,94 @@ footer div.footer-content img {
 /*----------------------------------------
    RESPONSIVE LAYOUT
   ----------------------------------------*/
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 1450px) {
+  #survey-form h1.consent {
+    padding: 15vh 0 0 35vw;
+  }
+  #survey-form h1.thanks {
+    padding: 15vh 0 0 33.5vw;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  #participate div.participate-button {
+    margin-left: -3vw;
+    width: 80vw;
+  }
+  .survey-break {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  #participate div.participate-button {
+    font-size: 1.3rem;
+    line-height: 45px;
+  }
+  #survey-form main {
+    width: 70vw;
+  }
+  #survey-form h1.thanks {
+    padding: 15vh 0 0 32vw;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  #survey-form h1 {
+    padding: 15vh 0 0 35vw;
+  }
+  #survey-form main p#form-top {
+    font-size: 1.1rem;
+  }
+  #survey-form h1.consent {
+    padding: 15vh 0 0 32vw;
+  }
+  #survey-form h1.thanks {
+    padding: 15vh 0 0 30vw;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .calendar, {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #participate div.participate-container {
+    padding-left: 14%;
+  }
+  #participate div.participate-button {
+    font-size: 1.15rem;
+    line-height: 40px;
+  }
+  #survey-form h1 {
+    padding: 15vh 0 0 30vw;
+  }
+  #survey-form main p#form-top {
+    font-size: 1rem;
+  }
+  .form-break {
+    display: block;
+  }
+  #survey-form h1.thanks {
+    padding: 15vh 0 0 28vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .survey-title {
+    display: block;
+  }
+  .btm-break {
+    display: block;
+  }
   #nav-bar div#toggle {
     position: absolute;
     width: 100%;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0);
   }
-
   #nav-bar input {
     position: absolute;
     top: 16px;
@@ -556,7 +675,6 @@ footer div.footer-content img {
     cursor: pointer;
     z-index: 3;
   }
-
   #nav-bar div#toggle span {
     position: relative;
     display: block;
@@ -592,12 +710,13 @@ footer div.footer-content img {
   }
   #nav-bar div#toggle ul {
     padding: 2vw 0 0 0;
-    margin-top: 31px;
+    margin-top: 5.95vh;
     opacity: 0;
+    display: none;
   }
   #nav-bar div#toggle ul li{
     position: relative;
-    right: -18px;
+    right: -20px;
     width: 100vw;
     padding: 2vw 0;
     background-color: rgba(0, 0, 0, 0.9);
@@ -618,6 +737,8 @@ footer div.footer-content img {
     color: #000;
   }
   #nav-bar input:checked + div#toggle ul {
+    display: block;
+    opacity: 1;
     -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
 	  animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
   }
@@ -626,18 +747,350 @@ footer div.footer-content img {
     -webkit-animation: swing-in-top-bck 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.2s both;
 	  animation: swing-in-top-bck 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.2s both;
   }
+  #landing-page h1 {
+    right: 0;
+    margin-right: 10%;
+  }
+  #landing-page h2 {
+    right: 0;
+    margin-right: 8%;
+  }
   #project h1{
-    margin-top: 15vh;
+    padding-top: 15vh;
   }
   #project div.long-text {
     margin: 5vh 15vw;
     width: 75vw;
   }
-  #project h1 {
+  #project h1,
+  #participate h1 {
     margin-left: 0;
     text-align: center;
   }
+  #participate h1 {
+    margin-top: -2vh;
+  }
+  #participate div.column {
+    width: 70vw;
+  }
+  #survey-form h1.consent {
+    padding: 15vh 0 0 26vw;
+  }
+  #survey-form h1.thanks {
+    padding: 15vh 0 0 23vw;
+  }
+  #survey-form main div.labels,
+  #survey-form main div#portfolio {
+    font-size: 0.9rem;
+    display: block;
+    text-align: left;
+    width: 80%;
+  }
+  #survey-form main div.right-tab {
+    display: block;
+    width: 80%;
+  }
+  #survey-form ul.inside-form {
+    width: 100%;
+    margin-bottom: 2vh;
+  }
+  #survey-form .input-field {
+    width: 115%;
+  }
+  #survey-form select.dropdown {
+    width: 118%;
+  }
+  #survey-form select.inline {
+    width: 157% !important;
+  }
+  #survey-form input.inline {
+    width: 152% !important;
+  }
+  #survey-form h2 {
+    padding-right: 5vw;
+    padding-left: 5vw;
+    font-size: 1.3rem;
+  }
+  #survey-form label.consent {
+    text-align: left;
+    width: 40%;
+  }
+  #survey-form input.consent {
+    width: 120%;
+  }
+  main div#thanks {
+    font-size: 1.1rem;
+    padding: 20vh 8vw;
+  }
+}
 
+@media screen and (max-width: 800px) {
+  #nav-bar input {
+    right: 5.8vw;
+  }
+  #survey-form h1 {
+    padding: 15vh 0 0 26vw;
+  }
+  #survey-form h1.consent {
+    padding: 15vh 0 0 23vw;
+  }
+  #survey-form h1.thanks {
+    padding: 15vh 0 0 20vw;
+  }
+  #survey-form main div#portfolio label {
+    margin: 20px 0;
+    width: 90%;
+  }
+  #survey-form main div.labels {
+    display: block;
+    text-align: left;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #nav-bar input {
+    right: 5.4vw;
+  }
+  #survey-form main div#portfolio {
+    width: 100%;
+  }
+  main div#thanks {
+    font-size: 1rem;
+    padding: 20.5vh 7vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #nav-bar input {
+    right: 5vw;
+  }
+  #survey-form h1 {
+    padding: 15vh 0 0 22vw;
+  }
+  #survey-form h1.consent {
+    padding: 15vh 0 0 20vw;
+  }
+  #survey-form h1.thanks {
+    padding: 15vh 0 0 16vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .rwd-break {
+    display: block;
+  }
+  #nav-bar input {
+    right: 4.5vw;
+  }
+  #survey-form h1 {
+    padding: 15vh 0 0 20vw;
+  }
+  #survey-form h1.consent {
+    padding: 15vh 0 0 17vw;
+  }
+  #survey-form h1.thanks {
+    padding: 15vh 0 0 14vw;
+  }
+  main div#thanks {
+    font-size: 1rem;
+    padding: 20.7vh 4vw;
+  }
+  main div#thanks span.dot {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #nav-bar input {
+    right: 3.8vw;
+  }
+  #survey-form h1 {
+    padding: 15vh 0 0 18vw;
+  }
+  #survey-form h1.consent {
+    padding: 15vh 0 0 15vw;
+  }
+  #survey-form h1.thanks {
+    padding: 15vh 0 0 10vw;
+  }
+  main div#thanks {
+    padding: 20.7vh 3vw;
+  }
+  main div#thanks span.dot {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #nav-bar input {
+    right: 3vw;
+  }
+  #survey-form main {
+    width: 80vw;
+  }
+  #survey-form h1 {
+    padding: 15vh 0 0 15vw;
+  }
+  #survey-form h1.consent {
+    padding: 15vh 0 0 12vw;
+  }
+  #survey-form h1.thanks {
+    padding: 15vh 0 0 7vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #nav-bar input {
+    right: 2vw;
+  }
+  #survey-form h1 {
+    padding: 15vh 0 0 12vw;
+    font-size: 1.65rem;
+  }
+  #survey-form h1.thanks {
+    padding: 15vh 0 0 9vw;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #landing-page h1 {
+    margin-right: 8%;
+  }
+  #landing-page h2 {
+    margin-right: 6%;
+  }
+  #participate div.participate-button {
+    font-size: 1rem;
+    line-height: 40px;
+  }
+  #nav-bar input {
+    right: 1vw;
+  }
+  #survey-form h1 {
+    padding: 15vh 0 0 12vw;
+    font-size: 1.5rem;
+  }
+  #survey-form h1.thanks {
+    padding: 15vh 0 0 6vw;
+  }
+  main div#thanks {
+    padding: 19.3vh 3vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #landing-page h1 {
+    margin-right: 10%;
+  }
+  #landing-page h1 span.title {
+    font-size: 3.2rem;
+  }
+  #landing-page h1 span.title span {
+    font-size: 3.4rem;
+  }
+  #landing-page h2 {
+    margin-right: 4%;
+  }
+  .btt-break {
+    display: block;
+  }
+  #nav-bar input {
+    right: 1vw;
+  }
+  #survey-form h1 {
+    padding: 15vh 0 0 8vw;
+  }
+  #survey-form h1.consent {
+    padding: 15vh 0 0 7.9vw;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #landing-page h1 {
+    margin-right: 8%;
+  }
+  #landing-page h2 {
+    margin-right: 2.5%;
+  }
+  #survey-form main {
+    width: 90vw;
+  }
+  #survey-form h1 {
+    padding: 15vh 0 0 4vw;
+  }
+  #survey-form h1.consent {
+    padding: 15vh 0 0 6vw;
+  }
+  #survey-form h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .mtr-break {
+    display: block;
+  }
+  #landing-page h1 {
+    margin-right: 6%;
+  }
+  #landing-page h2 {
+    margin-right: 0%;
+  }
+  #survey-form h1 {
+    padding: 15vh 0 0 6vw;
+  }
+  #survey-form h1.consent {
+    padding: 15vh 0 0 7vw;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  #landing-page h1 {
+    margin-right: 5%;
+  }
+  .survey-break {
+    display: none;
+  }
+  #survey-form h1 {
+    padding: 15vh 0 0 7vw;
+    font-size: 1.4rem;
+  }
+  #survey-form h1.consent {
+    padding: 15vh 0 0 4vw;
+  }
+  #survey-form main {
+    width: 95vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #landing-page h1 span.title {
+    font-size: 3rem;
+  }
+  #landing-page h1 span.title span {
+    font-size: 3.2rem;
+  }
+  #landing-page h1 {
+    margin-right: 5%;
+  }
+  #landing-page h2 {
+    margin-right: -8%;
+  }
+  #survey-form h1 {
+    padding: 15vh 0 0 5vw;
+    font-size: 1.3rem;
+  }
+  #survey-form h1.consent {
+    padding: 15vh 0 0 4vw;
+    font-size: 1.3rem;
+  }
+  #survey-form main {
+    width: 100vw;
+  }
+}
 
 /*----------------------------------------
    animation fade-out
