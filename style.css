@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+body {
+  min-height: 100vh;
+}
+
 .rwd-break,
 .btm-break,
 .btt-break,
